@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta Mastercard Débit</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tarjeta Mastercard Débit</h1>
+            <h2>Todo lo que necesitas en una sola tarjeta</h2>
+        </header>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="1.jpg" alt="Mastercard">
+                </div>
+                <div class="swiper-slide">
+                    <img src="2.jpg" alt="Mastercard">
+                </div>
+                <div class="swiper-slide">
+                    <img src="3.jpg" alt="Mastercard">
+                </div>
+                <div class="swiper-slide">
+                    <img src="4.jpg" alt="Mastercard">
+                </div>
+                <div class="swiper-slide">
+                    <img src="5.jpg" alt="Mastercard">
+                </div>
+                <div class="swiper-slide">
+                    <img src="6.jpg" alt="Mastercard">
+                </div>
+                <div class="swiper-slide">
+                    <img src="7.jpg" alt="Mastercard">
+                </div>
+                <div class="swiper-slide">
+                    <img src="8.jpg" alt="Mastercard">
+                </div>
+                <div class="swiper-slide">
+                    <img src="9.jpg" alt="Mastercard">
+                </div>
+                <div class="swiper-slide">
+                    <img src="10.jpg" alt="Mastercard">
+                </div>
+                <div class="swiper-slide">
+                    <img src="11.jpg" alt="Mastercard">
+                </div>
+                <div class="swiper-slide">
+                    <img src="12.jpg" alt="Mastercard">
+                </div>
+                <div class="swiper-slide">
+                    <img src="13.jpg" alt="Mastercard">
+                </div>
+                <div class="swiper-slide">
+                    <img src="14.jpg" alt="Mastercard">
+
+            </div>
+            <div class="swiper-pagination"></div>
+
+        <footer>
+            <a href="https://www.bt.com.ve" target="_blank" class="footer-link">Visita www.bt.com.ve</a>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        // Inicializar Swiper
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+            }
+        });
+
+        // Preguntar por la descarga del PDF al cargar la página
+        window.onload = function() {
+            if (confirm('¿Desea descargar el manual de preguntas en PDF?')) {
+                const link = document.createElement('a');
+                link.href = 'project/MANUAL DE PREGUNTAS BDT MC (4).pdf';
+                link.download = 'MANUAL DE PREGUNTAS BDT MC (4).pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+    </script>
+</body>
+</html>
